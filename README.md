@@ -1,5 +1,9 @@
 # Incidentkartan
 
+This is an app showing data about incidents in Sweden on a map. Built with Mithril JS, Leaflet JS, Webpack and Apache Cordova. Using the public APIs "Brottsplatskartan" https://brottsplatskartan.se/sida/api and "Kolada API" https://github.com/Hypergene/kolada.
+
+The app is meant to be run as a native app through Apache Cordova.
+
 ## Specifikation
 
 Syftet med applikationen är att visa information om aktuella händelser relaterade till brott eller olyckor. Dessutom ska information om brottsstatisktik i Sveriges kommuner visas.
@@ -61,7 +65,7 @@ Tillägget [cordova-plugin-file](https://cordova.apache.org/docs/en/latest/refer
 
 ### Struktur
 
-Hela appen samlas genom Webpack till filen `www/app.js`. 
+Hela appen samlas genom Webpack till filen `www/app.js`.
 
 I `www/src` finns javascript-filerna som ligger till grund för appen.
 
