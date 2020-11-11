@@ -1,0 +1,385 @@
+body,
+.input,
+.button {
+    font: normal 16px Verdana;
+    margin: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+html,
+body,
+.layout {
+    height: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.layout {
+    position: relative;
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0;
+    bottom: 0;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: column;
+}
+
+.header {
+    margin-bottom: 1.4rem;
+}
+
+form {
+    padding: 0 8px;
+}
+
+.question {
+    margin: 0 8px;
+}
+
+.layout-header {
+    text-align: center;
+    color: #0032bd;
+    margin-bottom: 0;
+    font-family: monospace;
+    font-size: 1.8rem;
+    padding: 0 8px;
+}
+
+.question {
+    padding: 1rem 0;
+}
+
+.menu {
+    position: absolute;
+    bottom: 0;
+    background-color: #f3f3f3;
+    padding: 3px 0;
+    font-size: 1.1rem;
+    width: 100%;
+    min-height: 60px;
+    box-shadow: 4px 4px 12px 2px #888;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    z-index: 1000;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #868686;
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 1rem 0.2rem;
+}
+
+.menu-link.active {
+    color: #0c0c0c;
+    text-decoration: underline dotted 1.5px;
+}
+
+.menu-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.settings-info {
+    max-width: 768px;
+    display: block;
+    margin: 0 auto;
+}
+
+.settings-info h3 {
+    margin-bottom: 1.4em;
+}
+
+.settings-info select,
+.settings-info input {
+    display: block;
+    margin-bottom: 1.4em;
+    font-size: 1.2em;
+    width: 30%;
+}
+
+.settings-info input {
+    margin-bottom: 0.4em;
+}
+
+.settings-info p {
+    margin-bottom: 1.4em;
+}
+
+.label {
+    display: block;
+    margin: 0 0 5px;
+}
+
+.input {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 0 10px;
+    padding: 10px 15px;
+    width: 100%;
+}
+
+.textarea {
+    resize: vertical;
+    max-height: 200px;
+}
+
+.button {
+    background: #eee;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    color: #333;
+    display: block;
+    margin: 0 auto 10px;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-align: center;
+    width: 95%;
+}
+
+.button.add,
+.button.edit {
+    background-color: #4dda4d;
+}
+
+.button.add:hover,
+.button.edit:hover {
+    background-color: #59e759;
+}
+
+/* .button.delete {
+    background-color: #e21111;
+    color: ivory;
+}
+
+.button.delete:hover {
+    background-color: #f61d1d;
+} */
+
+.button:hover {
+    cursor: pointer;
+}
+
+.gpsButtons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.gpsButton {
+    width: 48%;
+    background-color: #5497d1;
+}
+
+.logout-button {
+    background-color: #00ff80;
+    position: absolute;
+    top: 0;
+    right: 16px;
+    z-index: 1000;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 0.2rem 0.4rem;
+}
+
+.logout-button:hover {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+form .button {
+    width: 100%;
+}
+
+form .input {
+    border-radius: 20px;
+}
+
+.error {
+    color: #e21111;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 2px;
+}
+
+
+/**
+* Tables
+*/
+.table {
+    box-sizing: border-box;
+    border-collapse: collapse;
+    margin-bottom: 1.4em;
+}
+
+th {
+    text-align: left;
+}
+
+tr {
+    border-bottom: 1px solid #ccc;
+}
+
+.table th,
+.table td {
+    padding: 0.8rem;
+}
+
+.number-cell {
+    text-align: right;
+}
+
+.table tr:nth-of-type(2n) {
+    background-color: #eee;
+}
+
+/**
+* Animations
+*/
+
+.slide-in {
+    animation: moveFromRight 0.4s ease both;
+    z-index: 500;
+}
+
+
+.slide-out {
+    animation: moveToLeft 0.4s ease both;
+    z-index: 1;
+}
+
+.slide-in,
+.slide-out {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+@keyframes moveFromRight {
+    from {
+        transform: translateX(110%);
+    }
+}
+
+@keyframes moveToLeft {
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.spinner {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 35px;
+    height: 35px;
+    border-top: 5px solid #0000ff9b;
+    border-right: 5px solid #0000ff9b;
+    border-bottom: 5px solid #0000ff9b;
+    border-left: 5px solid #0000ff18;
+    border-radius: 50%;
+    animation-duration: 1s;
+    animation-name: rotate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 999;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.layout .section {
+    position: relative;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+/**
+* Style for map
+*/
+#map {
+    height: 43rem;
+}
+
+.div-icon-red {
+    background-color: #ee2626d8;
+    border-radius: 50%;
+    border: 6px solid #ee262641;
+}
+
+.div-icon-green {
+    background-color: #37ee26bc;
+    border-radius: 50%;
+    border: 6px solid #37ee2648;
+}
+
+.div-icon b {
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%) translateX(50%);
+    -ms-transform: translateY(-50%) translateX(50%);
+    right: 50%;
+}
+
+.cacheInfo {
+    text-align: center;
+    background-color: #f77;
+    border-radius: 2px;
+    font-size: 0.8em;
+}
+
+@media only screen and (max-width: 430px) {
+    .layout-header {
+        font-size: 1.5rem;
+    }
+
+    .logout-button {
+        right: 4px;
+    }
+
+    .settings-info select,
+    .settings-info input {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 810px) {
+    .settings-info {
+        margin: 0 0.8rem;
+    }
+}
+
+/**
+* Fix for warning "Will-change memory consumption is too high".
+*/
+.leaflet-fade-anim .leaflet-tile,
+.leaflet-zoom-anim .leaflet-zoom-animated {
+    will-change: auto !important;
+}
