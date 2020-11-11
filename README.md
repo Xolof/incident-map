@@ -1,10 +1,14 @@
-# Incidentkartan
+# Incidentkartan - The Incident Map
+
+## Info in English
 
 This is an app showing data about incidents in Sweden on a map. Built with Mithril JS, Leaflet JS, Webpack and Apache Cordova. Using the public APIs "Brottsplatskartan" https://brottsplatskartan.se/sida/api and "Kolada API" https://github.com/Hypergene/kolada.
 
 The app is meant to be run as a native app through Apache Cordova.
 
-## Specifikation
+## Info in Swedish
+
+### Specifikation
 
 Syftet med applikationen är att visa information om aktuella händelser relaterade till brott eller olyckor. Dessutom ska information om brottsstatisktik i Sveriges kommuner visas.
 
@@ -12,7 +16,7 @@ Användaren ska kunna se kommuner och händelser på en karta. Det ska gå att k
 
 Man ska kunna visa händelser från ett län och man ska kunna välja hur många händelser som visas.
 
-## Datakällor
+### Datakällor
 
 Information om aktuella incidenter hämtas från [Brottsplatskartans API](https://brottsplatskartan.se/sida/api).
 
@@ -43,9 +47,9 @@ Värdena efter `municipality/` representerar kommunkoder.
 
 Det sista värdet, efter `year/` representerar det år för vilket statistik ska hämtas. Det är definierat som nuvarande år minus två, då det tar ett tag för statistiken att bli tillgänglig.
 
-## Arkitektur
+### Arkitektur
 
-### Teknik
+#### Teknik
 
 Följande verktyg har använts för att lösa uppgiften.
 
@@ -63,7 +67,7 @@ Tillägget [cordova-plugin-file](https://cordova.apache.org/docs/en/latest/refer
 
 [Cordova-plugin-splashscreen](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-splashscreen/index.html) används för att kunna visa en splash screen när appen körs på Android.
 
-### Struktur
+#### Struktur
 
 Hela appen samlas genom Webpack till filen `www/app.js`.
 
@@ -71,7 +75,7 @@ I `www/src` finns javascript-filerna som ligger till grund för appen.
 
 `www/src/index.js` definierar appens rutter.
 
-#### Vyer
+##### Vyer
 
 I `src/views` finns filer för vyer.
 
@@ -83,7 +87,7 @@ I `src/views` finns filer för vyer.
 
 `AboutView.js` innehåller information om appen.
 
-#### Moduler
+##### Moduler
 
 I katalogen `src/models` finns moduler med funktionalitet för olika delar av appen.
 
