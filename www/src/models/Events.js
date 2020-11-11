@@ -2,6 +2,7 @@ let m = require("mithril");
 
 const Map = require("../models/MapModel");
 const Settings = require("../models/Settings");
+const apiId = require("../../../api-id");
 let L = require("leaflet");
 
 let Events = {
@@ -22,7 +23,7 @@ let Events = {
             method: "GET",
             url: `
                 https://brottsplatskartan.se/api/events/?limit=
-                ${Settings.numEvents}${Settings.county.query}&app=krimsokpina
+                ${Settings.numEvents}${Settings.county.query}&app=${apiId}
                 `,
         })
             .then(async function (result) {
@@ -53,7 +54,7 @@ let Events = {
                         .setContent(`
                             <h3>${event.description}</h3>
                             <p>${event.date_human}</p>
-                            ${event.content_formatted}                    
+                            ${event.content_formatted}
                         `)
                 )
             );
