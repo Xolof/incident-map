@@ -6,6 +6,9 @@ This is an app showing data about incidents in Sweden on a map. Built with Mithr
 
 The app is meant to be run as a native app through Apache Cordova.
 
+After setting up Cordova in your environment a platform can be added with `cordova platform add --save browser` or `cordova platform add --save android`.
+The app can then be started with `cordova run browser` or `cordova run android`.
+
 ## Info in Swedish
 
 ### Specifikation
